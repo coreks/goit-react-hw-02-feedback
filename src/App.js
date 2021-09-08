@@ -1,11 +1,3 @@
-// import Feedback from "./components/Feedback/Feedback.jsx";
-
-// const App = () => {
-//   return <Feedback />;
-// };
-
-// export default App;
-
 import { Component } from 'react';
 import Statistics from './components/Statistics/Statistics';
 import FeedbackOptions from './components/FeedbackOptions/FeedbackOptions';
