@@ -1,22 +1,20 @@
-import PropTypes from "prop-types";
-import Notification from "../Notification/Notification";
-import css from "../Statistics/Statistics.module.css";
+import PropTypes from 'prop-types';
+import Notification from '../Notification/Notification';
+import css from '../Statistics/Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <div className={css.statistics}>
-      <h2 className={css.title}>Statisics</h2>
-      {total ? (
-        <>
+      {total && (
+        <div>
           <p className={css.text}>Good: {good}</p>
           <p className={css.text}>Neutral: {neutral}</p>
           <p className={css.text}>Bad: {bad}</p>
           <p className={css.text}>Total: {total}</p>
           <p className={css.text}>Positive feedback: {positivePercentage}%</p>
-        </>
-      ) : (
-        <Notification message="No feedback given" />
+        </div>
       )}
+      {!total && <Notification message="No feedback given" />}
     </div>
   );
 };
