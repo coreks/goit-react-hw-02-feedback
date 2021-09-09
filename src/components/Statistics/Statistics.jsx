@@ -7,11 +7,11 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
     <div className={css.statistics}>
       {total > 0 && (
         <ul className={css.list}>
-          <li className={css.text}>Good: {good}</li>
-          <li className={css.text}>Neutral: {neutral}</li>
-          <li className={css.text}>Bad: {bad}</li>
-          <li className={css.text}>Total: {total}</li>
-          <li className={css.text}>Positive feedback: {positivePercentage}%</li>
+          <li>Good: {good}</li>
+          <li>Neutral: {neutral}</li>
+          <li>Bad: {bad}</li>
+          <li>Total: {total}</li>
+          <li>Positive feedback: {positivePercentage}%</li>
         </ul>
       )}
       {!total && <Notification message="No feedback given" />}
